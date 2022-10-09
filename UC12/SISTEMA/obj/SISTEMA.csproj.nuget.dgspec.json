@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arthu\\Desktop\\UC12\\SISTEMA\\SISTEMA.csproj": {}
+    "C:\\GitHub\\UC12---Sistema\\UC12\\SISTEMA\\SISTEMA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arthu\\Desktop\\UC12\\SISTEMA\\SISTEMA.csproj": {
+    "C:\\GitHub\\UC12---Sistema\\UC12\\SISTEMA\\SISTEMA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arthu\\Desktop\\UC12\\SISTEMA\\SISTEMA.csproj",
+        "projectUniqueName": "C:\\GitHub\\UC12---Sistema\\UC12\\SISTEMA\\SISTEMA.csproj",
         "projectName": "SISTEMA",
-        "projectPath": "C:\\Users\\arthu\\Desktop\\UC12\\SISTEMA\\SISTEMA.csproj",
+        "projectPath": "C:\\GitHub\\UC12---Sistema\\UC12\\SISTEMA\\SISTEMA.csproj",
         "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arthu\\Desktop\\UC12\\SISTEMA\\obj\\",
+        "outputPath": "C:\\GitHub\\UC12---Sistema\\UC12\\SISTEMA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
