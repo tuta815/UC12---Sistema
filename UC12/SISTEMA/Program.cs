@@ -29,18 +29,81 @@ namespace SISTEMA
             //     Console.WriteLine("Cadastro Reprovado");
             // };
 
-            Endereco end = new Endereco();
-            end.logradouro = "Rua X";
-            end.numero = 100;
-            end.complemento = "Qualquer coisa";
-            end.endercoComercial = false;
+            // Endereco end = new Endereco();
+            // end.logradouro = "Rua X";
+            // end.numero = 100;
+            // end.complemento = "Qualquer coisa";
+            // end.endercoComercial = false;
 
-            PessoaJuridica pj = new PessoaJuridica();
-            pj.endereco = end;
-            pj.CNPJ = "12345678990001";
-            pj.razaoSocial = "Pessoa Jurídica";
+            // PessoaJuridica pj = new PessoaJuridica();
+            // pj.endereco = end;
+            // pj.CNPJ = "12345678990001";
+            // pj.razaoSocial = "Pessoa Jurídica";
 
-            Console.WriteLine(pj.validacaoCNPJ(pj.CNPJ));
+            // Console.WriteLine(pj.validacaoCNPJ(pj.CNPJ));
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            // Console.BackgroundColor = ConsoleColor.Blue;
+            Console.WriteLine(@$"                     
+=========================================
+|                                       |
+|                                       | 
+|    Seja bem vindo ao nosso Sistema    |
+|    de cadastro de Pessoa Física e     |
+|             Pessoa Jurídica           |
+|                                       | 
+|                                       |
+=========================================                      
+");
+
+            Console.Write("iniciando ");
+            Thread.Sleep(500);
+
+            for (var contador = 0; contador < 10; contador++)
+            {
+                Console.Write("#");
+                Thread.Sleep(500);
+            }
+            Console.Clear();
+
+
+            string? opcao;
+            do
+            {
+                Console.WriteLine(@$"
+=========================================            
+|   Escolha uma das opções abaixo       | 
+=========================================
+|                                       |
+|           1 - Pessoa Física           |
+|           2 - Pessoa Jurídica         | 
+|                                       |
+|           0 - Sair                    | 
+|                                       |
+=========================================
+            
+            
+            ");
+
+                opcao = Console.ReadLine();
+
+                switch (opcao)
+                {
+                    case "1":
+                        break;
+                    case "2":
+                        break;
+                    case "0":
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida, por favor digite uma das opções apresentadas");
+                        break;
+                }
+            } while (opcao != "0");
+
+
+
+            Console.ResetColor();
         }
     }
 }
