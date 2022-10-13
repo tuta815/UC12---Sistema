@@ -11,7 +11,25 @@ namespace SISTEMA
 
         public string razaoSocial { get; set; }
 
-        public override void PagarImposto(float rendimento) { }
+        public override float PagarImposto(float rendimento)
+        {
+            float imposto = 0;
+
+            if (rendimento <= 5000)
+            {
+                imposto = rendimento * 6 / 100;
+            }
+            else if (rendimento > 5000 && rendimento <= 10000)
+            {
+                imposto = rendimento * 8 / 100;
+            }
+            else if (rendimento > 10000)
+            {
+                imposto = rendimento * 10 / 100;
+            }
+
+            return imposto;
+        }
 
         public bool validacaoCNPJ(string CNPJ)
         {
