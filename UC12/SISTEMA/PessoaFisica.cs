@@ -12,19 +12,21 @@ namespace SISTEMA
 
         public DateTime dataNascimento { get; set; }
 
-        public override float PagarImposto(float rendimento)
+        public float salario { get; set; }
+
+        public override float PagarImposto(float salario)
         {
-            if (rendimento <= 1500)
+            if (salario <= 1500)
             {
                 return 0;
             }
-            else if (rendimento > 1500 && rendimento <= 5000)
+            else if (salario > 1500 && salario <= 5000)
             {
-                return rendimento * 3 / 100;
+                return salario * 3 / 100;
             }
-            else if (rendimento > 5000)
+            else if (salario > 5000)
             {
-                return rendimento * 5 / 100;
+                return salario * 5 / 100;
             }
             else
             {
@@ -34,7 +36,7 @@ namespace SISTEMA
 
         public bool ValidarDataNascimento(DateTime dataNascimento)
         {
-            DateTime dataAtual = DateTime.Today;
+            DateTime dataAtual = DateTime.Now;
 
             double anos = (dataAtual - dataNascimento).TotalDays / 365;
 
