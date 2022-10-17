@@ -11,6 +11,10 @@ namespace SISTEMA
 
         public string razaoSocial { get; set; }
 
+        public string caminho { get; private set; } = "Database/PessoaJuridica.csv";
+
+
+
         public override float PagarImposto(float rendimento)
         {
             float imposto = 0;
@@ -44,6 +48,38 @@ namespace SISTEMA
                 return false;
             }
         }
+
+        public void Inserir(PessoaJuridica pj)
+        {
+            VerificarPastaArquivo(caminho);
+
+            string[] pjstring = { $"{pj.nome}, {pj.CNPJ}, {pj.razaoSocial}" };
+
+            File.AppendAllLines(caminho, pjstring);
+        }
+
+        public List<PessoaJuridica> Ler()
+        {
+            List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
+
+            string[] linhas = File.ReadAllLines(caminho);
+
+            foreach (string cadaLinha in linhas)
+            {
+                string[] atributos = cadaLinha.Split(",");
+
+                PessoaJuridica cadaPj = new PessoaJuridica();
+
+                cadaPj.nome = atributos[0];
+                cadaPj.CNPJ = atributos[1];
+                cadaPj.razaoSocial = atributos[2];
+
+                listaPj.Add(cadaPj);
+            }
+            return listaPj;
+        }
+
+
 
 
 
